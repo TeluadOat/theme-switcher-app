@@ -6,8 +6,20 @@
   border: 2px solid red;
 } */
 
+
 body {
   margin: 0;
   transition: background-color 0.3s ease,
     color 0.3s ease;
+}
+
+button {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+}
+
+.toggle-bar {
+  /* border: 2px solid green; */
+  display: flex;
 }
