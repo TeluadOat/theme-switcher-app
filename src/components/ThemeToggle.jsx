@@ -7,12 +7,12 @@ export default function ThemeToggle() {
     const { theme, toggleLightTheme, toggleDarkTheme } = useContext(ThemeContext);
 
     return (
-        <div className={`toggle-bar rounded w-fit ${theme === "light" ? "bg-gray-200" : "bg-black"}`} >
-            <button onClick={toggleLightTheme} className={`px-4 py-2 rounded transition-colors ${theme === "light" ? "bg-gray-400 text-gray-700 outline outline-black" : "bg-black text-gray-500"}`}>
-                <SunIcon className="h-8 w-8 mr-2" />Light
+        <div className={`toggle-bar flex items-center rounded-xl gap-2 p-1 transition-colors ${theme === "light" ? "bg-gray-200" : "bg-gray-800"}`} >
+            <button onClick={toggleLightTheme} className={`flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-medium transition-all ${theme === "light" ? "bg-white text-gray-900 shadow" : "text-gray-300 hover:bg-gray-700"}`}>
+                <SunIcon className="h-6 w-6" />Light
             </button>
-            <button onClick={toggleDarkTheme} className={`px-4 py-2 rounded transition-colors ml-4 ${theme === "light" ? "bg-gray-200 text-gray-700" : "bg-gray-800 text-gray-500 outline outline-white"}`}>
-                <MoonIcon className="h-8 w-8 mr-2" />Dark
+            <button onClick={toggleDarkTheme} className={`flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-medium transition-all ${theme === "light" ? "text-gray-700 hover:bg-gray-300" : "bg-gray-900 text-white shadow"}`}>
+                <MoonIcon className="h-6 w-6" />Dark
             </button>
         </div >
     );

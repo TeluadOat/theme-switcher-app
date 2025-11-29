@@ -18,8 +18,3 @@ button {
   display: flex;
   align-items: center;
 }
-
-.toggle-bar {
-  /* border: 2px solid green; */
-  display: flex;
-}
