@@ -1,18 +1,24 @@
-import { useContext } from 'react';
-import { ThemeContext } from './context/ThemeContext.jsx';
-import ThemeToggle from './components/ThemeToggle.jsx';
-import Others from './components/Others.jsx';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import AccountSettings from './pages/AccountSettings.jsx';
+import Feedback from './pages/Feedback.jsx';
+import About from './pages/About.jsx';
+import Support from './pages/Support.jsx';
+import Legal from './pages/Legal.jsx';
 
 import './App.css'
 
 function App() {
-  const { theme } = useContext(ThemeContext);
   return (
-    <div className={`min-h-screen p-5 transition-colors ${theme === "light" ? "bg-white text-gray-900" : "bg-black/90 text-white"}`}>
-      <h1 className={`text-base font-bold mb-3 ${theme === "light" ? "" : "text-gray-300"}`}>Theme</h1>
-      <ThemeToggle />
-      <Others />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/settings" element={<AccountSettings />} />
+      <Route path="/feedback" element={<Feedback />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/support" element={<Support />} />
+      <Route path="/legal" element={<Legal />} />
+    </Routes>
+
   )
 }
 export default App
