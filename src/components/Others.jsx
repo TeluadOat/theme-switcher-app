@@ -1,15 +1,38 @@
 import { useContext } from "react"
 import { ThemeContext } from "../context/ThemeContext.jsx";
 
+import {
+    Cog6ToothIcon,
+    ChatBubbleLeftRightIcon,
+    InformationCircleIcon,
+    LifebuoyIcon,
+    ScaleIcon
+} from "@heroicons/react/24/outline";
+
 export default function Others() {
     const { theme } = useContext(ThemeContext);
+
+    const items = [
+        { label: "Account Settings", icon: Cog6ToothIcon, onClick: () => navigate("/settings") },
+        { label: "Give Feedback", icon: ChatBubbleLeftRightIcon, onClick: () => console.log("Go to feedback") },
+        { label: "About", icon: InformationCircleIcon, onClick: () => console.log("Go to about") },
+        { label: "Support", icon: LifebuoyIcon, onClick: () => console.log("Go to support") },
+        { label: "Legal", icon: ScaleIcon, onClick: () => console.log("Go to legal") },
+    ];
+
     return (
-        <div className={`flex flex-col gap-4 mt-5`} >
-            < span > Account settings</ span>
-            <span>Give feedback</span>
-            <span>About</span>
-            <span>Support</span>
-            <span>Legal</span>
-        </div>
+        <div className="mt-6 w-full max-w-sm">
+            <div className={`flex flex-col rounded-xl shadow-sm border transition-colors overflow-hidden ${theme === "light" ? "bg-white border-gray-300" : "bg-gray-800 border-gray-700"}`}>
+                {items.map((items, index) => {
+                    const Icon = items.icon;
+                    return (
+                        <button key={index} onClick={items.onClick} className={`flex items-center gap-3 px-5 py-4 text-left transition-all ${theme === "light" ? "hover:bg-gray-100 text-gray-800" : "hover:bg-gray-700 text-gray-200"}`}>
+                            <Icon className="h-6 w-6" />
+                            <span className="font-medium">{items.label}</span>
+                        </button>
+                    )
+                })}
+            </div>
+        </div >
     )
 }

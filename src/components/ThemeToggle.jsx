@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext.jsx";
-import { MoonIcon } from '@heroicons/react/16/solid';
-import { SunIcon } from "@heroicons/react/16/solid";
+import { MoonIcon } from '@heroicons/react/24/outline';
+import { SunIcon } from "@heroicons/react/24/outline";
 
 export default function ThemeToggle() {
     const { theme, toggleLightTheme, toggleDarkTheme } = useContext(ThemeContext);
