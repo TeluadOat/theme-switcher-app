@@ -5,12 +5,12 @@ export default function AccountSettings() {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={`min-h-screen max-w-2xl p-6 transition-colors ${theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-100"}`}>
+        <div className={`min-h-screen p-6 transition-colors ${theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-100"}`}>
             <h1 id="account-settings-title" className="text-2xl font-bold mb-4">Account Settings</h1>
             <div
                 role="form"
                 aria-labelledby="account-settings-title"
-                className={`p-5 rounded-xl shadow ${theme === "light" ? "bg-gray-100" : "bg-gray-800"}`}>
+                className={`max-w-2xl p-5 rounded-xl shadow ${theme === "light" ? "bg-gray-100" : "bg-gray-800"}`}>
                 <p id="form-description" className="mb-3 text-sm">Manage your account information and personal preferences.</p>
                 <div className="flex flex-col gap-4">
                     <label htmlFor="name" className="flex flex-col">
