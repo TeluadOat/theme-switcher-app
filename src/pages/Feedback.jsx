@@ -4,7 +4,7 @@ import { ThemeContext } from "../context/ThemeContext";
 export default function Feedback() {
     const { theme } = useContext(ThemeContext);
     return (
-        <div className={`min-h-screen md:w-4xl p-6 transition-colors ${theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-100"}`}>
+        <div className={`min-h-screen max-w-2xl p-6 transition-colors ${theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-100"}`}>
             <h1 id="feedback-title" className="text-2xl font-bold mb-4">Give Feedback</h1>
             <div role="form" aria-labelledby="feedback-title" className={`p-5 rounded-xl shadow ${theme === "light" ? "bg-gray-100" : "bg-gray-800"}`}>
                 <p id="form-description" className="mb-3 text-sm">We'd love to hear your thoughts about this app</p>

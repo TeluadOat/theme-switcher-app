@@ -5,7 +5,7 @@ export default function AccountSettings() {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={`min-h-screen p-6 transition-colors ${theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-100"}`}>
+        <div className={`min-h-screen max-w-2xl p-6 transition-colors ${theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-gray-100"}`}>
             <h1 id="account-settings-title" className="text-2xl font-bold mb-4">Account Settings</h1>
             <div
                 role="form"
